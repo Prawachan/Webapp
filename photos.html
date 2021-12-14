@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Goalie</title>
+        <link rel="stylesheet" href="home.css">
+        <script src = "home.js" defer></script>
+        <script src="https://kit.fontawesome.com/411c72c549.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="Timer.css">
+        <script src = "Timer.js" defer></script>
+        <link rel="stylesheet" href="photos.css">
+        <script src = "photos.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script> 
+          $(function(){
+            $("#includedContent1").load("footer.html"); 
+          });
+          </script> 
+</head>
+<body>
+        <!-- Navbar -->
+        <div class="wrapper">
+                <nav>
+                        <img src="images/logo.png" class="logo">
+                  <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="goals.html">Goals</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                  </ul>
+                </nav>
+        
+        <!--date -->
+        <div class="date">
+                <p id="date"></p>
+                <script type="text/javascript">
+                       var d=new Date()
+                       var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+                                   "Friday","Saturday")
+                       document.write("Today is " + weekday[d.getDay()])
+                </script>
+         </div>    
+           
+  <!--timer app--> 
+<!--pphotos-->
+
+  <!-- Photos app-->
+  <body>
+    <section>
+      <div class="item show"><img src="https://businessviewmagazine.com/wp-content/uploads/2020/10/Aerial-Drone-View-Front-Campus_0011.jpg"" alt="">
+        <div class="caption">
+            <h2>Wesleyan Map</h2>
+        </div></div>
+        
+      <div class="item"><img src="https://collegevine.imgix.net/3203c871-599c-435e-892d-58d67231e3af.jpg?fit=crop&crop=edges&h=300&q=80&auto=format" alt="">
+        <div class="caption">
+            <h2>Wesleyan Dorms</h2>
+        </div>
+      </div>
+      <div class="item"><img src="https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/199209_hero.jpg?itok=1wen4jFS" alt="">
+        <div class="caption">
+            <h2>Wesleyan Classes</h2>
+        </div></div>
+
+      <div class="item"><img src="https://ncwc.edu/wp-content/uploads/2019/07/braswell-courtyard2-900px-web.jpg" alt="">
+        <div class="caption">
+            <h2>Wesleyan Roam</h2>
+        </div></div>
+    </section>
+    <script>
+      const items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          console.log('test')
+          items.forEach(item => item.classList.remove('show'));
+          item.classList.add('show')
+        })
+      })
+    </script>
+  </body>
+</body>
+<footer>
+  <div id="includedContent1"></div>
+</footer>

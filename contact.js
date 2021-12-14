@@ -1,0 +1,12 @@
+$(".btn-signup").click(function(){
+    $(this).addClass("hidden");
+    $(".signup").addClass("show");
+    $(".login").removeClass("show");
+    $(".btn-login").removeClass("hidden");
+  })
+  $(".btn-login").click(function(){
+    $(this).addClass("hidden");
+    $(".signup").removeClass("show");
+    $(".login").addClass("show");
+    $(".btn-signup").removeClass("hidden");
+  })

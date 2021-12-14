@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Goalie</title>
+        <link rel="stylesheet" href="home.css">
+        <script src = "home.js" defer></script>
+        <script src="https://kit.fontawesome.com/411c72c549.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="Timer.css">
+        <script src = "Timer.js" defer></script>
+        <link rel="stylesheet" href="read.css">
+        <script src = "read.js" defer></script>
+        <link rel="stylesheet" href="animate.css">
+        <script src = "animate.js" defer></script>
+        <link rel="stylesheet" href="tiles.css">
+        <link rel="stylesheet" href="tiles2.css">
+        <script src = "tiles2.js" defer></script>
+        <link rel="stylesheet" href="tiles3.css">
+        <script src = "tiles3.js" defer></script>
+        <script> 
+          $(function(){
+            $("#includedContent").load("card.html"); 
+          });
+          </script> 
+        <link rel="stylesheet" href="goals.css">
+        <script src = "goals.js" defer></script>
+        <script> 
+          $(function(){
+            $("#includedContent1").load("footer.html"); 
+          });
+          </script> 
+</head>
+<body>
+  <!-- Navbar -->
+        <div class="wrapper">
+                <nav>
+                        <img src="images/logo.png" class="logo">
+                        <canvas id="scene"></canvas>
+                        
+                  <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="goals.html">Goals</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                  </ul>
+                </nav>
+        
+  <!--date -->
+        <div class="date">
+                <p id="date"></p>
+                <script type="text/javascript">
+                       var d=new Date()
+                       var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+                                   "Friday","Saturday")
+                       document.write("Today is " + weekday[d.getDay()])
+                </script>
+         </div>    
+           
+  <!--timer app--> 
+  
+      <section>
+        <div class="clock" data-format='12'>
+          <h1>00 : 00 : 00 AM</h1>
+        </div>
+        <div class="format">
+          <h1>Format</h1>
+          <button data-format='12'>12hours</button>
+          <button data-format='24'>24hours</button>
+        </div>
+      </section>
+      </div>
+
+<!--todo app-->
+<div class="cont_principal">
+    <div class="cont_centrar">
+    
+      <div class="cont_todo_list_top">
+      <div class="cont_titulo_cont">
+        <h3>Set your goals</h3>
+        </div>
+    <div class="cont_add_titulo_cont"><a href="#e" onclick="add_new()"><i class="material-icons">&#xE145;</i></a>
+        </div>
+     
+     </div>
+    <div class="cont_crear_new">
+      <table class="table">
+    <tr>
+      <th>Task</th>
+      <th>Title</th>
+     <th>Date</th>
+        </tr>
+        <tr>
+        <td><select name="" id="action_select">
+     <option value="STUDY">Study</option>
+     <option value="GAME">Game</option> <option value="WALK">Walk</option> <option value="MUSIC">MUSIC</option> 
+          </select>
+    
+          </td>
+           <td>
+    <input type="text" class="input_title_desc" />      
+    
+             
+          </td>
+        <td>
+    <select name="" class="input_description_title"  id="date_select">
+     <option value="SUNDAY">Sunday</option>
+     <option value="MONDAY">Monday</option> 
+     <option value="TUESDAY">Tuesday</option>
+     <option value="WEDNESDAY">Wednesday</option>
+     <option value="THURSDAY">Thursday</option>
+     <option value="FRIDAY">Friday</option>
+     <option value="SATURDAY">Saturday</option>      </select>
+    
+          
+          </td>
+        </tr>
+    <tr>
+       <th class="titl_description" >Description</th>
+        </tr>
+    <tr>
+    
+      <td colspan="3">
+      <input type="text" class="input_description" required />
+      </td>
+        </tr>
+        <tr>
+        <td colspan="3">
+      <button class="btn_add_fin"  onclick="add_to_list()">ADD</button>
+      </td>
+        </tr>
+      </table>
+     
+      </div>
+      
+      
+    <div class="cont_princ_lists">
+    <ul>
+      <li class="list_shopping li_num_0_1">
+      <div class="col_md_1_list">
+        <p>GAME</p>
+        </div>
+    <div class="col_md_2_list">
+        <h4>Play Apex for an hour</h4>
+    <p>Apex Legends</p>
+        </div>
+        <div class="col_md_3_list">
+    <div class="cont_text_date">
+    <p>SUNDAY</p>      
+          </div>    
+    <div class="cont_btns_options">
+      <ul>
+     
+        <li><a href="#" onclick="finish_action('0','0_1');"><i class="material-icons">&#xE5CA;</i></a></li>
+      </ul>    
+          </div>
+        </div>
+      </li>
+   </div>
+   <div class="cont_princ_lists">
+    <ul>
+      <li class="list_shopping li_num_0_1">
+      <div class="col_md_1_list">
+        <p>STUDY</p>
+        </div>
+    <div class="col_md_2_list">
+        <h4>Study for an hour</h4>
+    <p>Javascript</p>
+        </div>
+        <div class="col_md_3_list">
+    <div class="cont_text_date">
+    <p>MONDAY</p>      
+          </div>    
+    <div class="cont_btns_options">
+      <ul>
+     
+        <li><a href="#" onclick="finish_action('0','0_1');"><i class="material-icons">&#xE5CA;</i></a></li>
+      </ul>    
+          </div>
+        </div>
+      </li>
+   </div>
+      
+      
+      
+      </div>
+    </div>
+</body>
+<footer>
+  <div id="includedContent1"></div>
+</footer>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Goalie</title>
+        <link rel="stylesheet" href="home.css">
+        <script src = "home.js" defer></script>
+        <script src="https://kit.fontawesome.com/411c72c549.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" href="Timer.css">
+        <script src = "Timer.js" defer></script>
+        <link rel="stylesheet" href="read.css">
+        <script src = "read.js" defer></script>
+        <script> 
+          $(function(){
+            $("#includedContent1").load("footer.html"); 
+          });
+          </script> 
+</head>
+<body>
+        <!-- Navbar -->
+        <div class="wrapper">
+                <nav>
+                        <img src="images/logo.png" class="logo">
+                  <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                    <li><a href="photos.html">Photos</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="goals.html">Goals</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                  </ul>
+                </nav>
+        
+        <!--date -->
+        <div class="date">
+                <p id="date"></p>
+                <script type="text/javascript">
+                       var d=new Date()
+                       var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday",
+                                   "Friday","Saturday")
+                       document.write("Today is " + weekday[d.getDay()])
+                </script>
+         </div>    
+           
+  <!--timer app--> 
+  <section>
+    <div class="clock" data-format='12'>
+      <h1>00 : 00 : 00 AM</h1>
+    </div>
+    <div class="format">
+      <h1>Clock format</h1>
+      <button data-format='12'>12hours</button>
+      <button data-format='24'>24hours</button>
+    </div>
+  </section>
+      
+  </div>
+
+  <!--Read app-->
+  
+  <div class="read"> <h1>This is my first note</h1>
+    <img src="https://clickup.com/blog/wp-content/uploads/2020/01/note-taking.png" width='400' class="note">
+    <p class="text">Check out more details on my first note,<span class="dots"> ...</span> <span class="moreText">
+        Welcome! Welcome! Welcome! We will write more on this later</span></p>  
+    <button class="read-more-btn">Read More</button></div>
+  
+
+  
+    
+</body>
